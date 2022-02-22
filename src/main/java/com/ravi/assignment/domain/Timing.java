@@ -15,7 +15,7 @@ import com.ravi.assignment.enums.Weekday;
 public class Timing {
     @GeneratedValue
     @Id
-    private String id;
+    private int id;
 
     private Instant start;
     private Instant end;
@@ -30,6 +30,7 @@ public class Timing {
     }
 
     public Timing(String id, Instant start, Instant end, Weekday weekday, Place place) {
+    public Timing(int id, Instant start, Instant end, Weekday weekday, Place place) {
         this.id = id;
         this.start = start;
         this.end = end;
@@ -37,11 +38,11 @@ public class Timing {
         this.place = place;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
