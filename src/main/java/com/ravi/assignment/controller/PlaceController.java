@@ -2,8 +2,11 @@ package com.ravi.assignment.controller;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import com.ravi.assignment.domain.Place;
+import com.ravi.assignment.dto.place.PlaceDTO;
+import com.ravi.assignment.dto.place.PlaceMapper;
 import com.ravi.assignment.repository.PlaceRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,10 +25,13 @@ public class PlaceController {
     
     @Autowired
     private PlaceRepository placeRepository;
+    
+    @Autowired
+    private PlaceMapper mapper;
 
     @GetMapping("places")
-    public ResponseEntity<List<Place>> getPlaces(){
-        return new ResponseEntity<>(placeRepository.findAll(),HttpStatus.OK);
+    public ResponseEntity<List<PlaceDTO>> getPlaces(){
+        return new ResponseEntity<>(placeRepository.findAll().stream().map(mapper::toDTO).collect(Collectors.toList()),HttpStatus.OK);
     }
 
     @GetMapping("/places/{id}")
