@@ -21,6 +21,10 @@ public class Place {
 
     public Place() {
     }
+    public Place(String label, String address) {
+        this.label = label;
+        this.address = address;
+    }
     
     public Place(int id, String label, String address) {
         this.id = id;

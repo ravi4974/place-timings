@@ -29,7 +29,12 @@ public class Timing {
     public Timing() {
     }
 
-    public Timing(String id, Instant start, Instant end, Weekday weekday, Place place) {
+    public Timing(Instant start, Instant end, Weekday weekday, Place place) {
+        this.start = start;
+        this.end = end;
+        this.weekday = weekday;
+        this.place = place;
+    }
     public Timing(int id, Instant start, Instant end, Weekday weekday, Place place) {
         this.id = id;
         this.start = start;
