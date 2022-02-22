@@ -1,5 +1,10 @@
-<mat-selection-list [multiple]="false">
-    <mat-list-option *ngFor="let place of places" [value]="place.id" (click)="onItemClicked(place.id)">
-      {{place.label}}
-    </mat-list-option>
-  </mat-selection-list>
+<mat-card>
+  <mat-card-title>List of Places</mat-card-title>
+  <mat-card-content>
+    <mat-selection-list [multiple]="false">
+      <mat-list-option *ngFor="let place of places" [value]="place.id" (click)="onItemClicked(place.id)">
+        {{place.label}}
+      </mat-list-option>
+    </mat-selection-list>
+  </mat-card-content>
+</mat-card>

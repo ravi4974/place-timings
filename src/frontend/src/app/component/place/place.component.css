@@ -1,0 +1,8 @@
+ul.dayspan{
+    list-style: none;
+}
+
+ul.timerange{
+    list-style: none;
+    text-align: right;
+}

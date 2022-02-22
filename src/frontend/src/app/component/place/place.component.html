@@ -3,10 +3,10 @@
   <mat-card-subtitle>{{place.address}}</mat-card-subtitle>
   <mat-card-content>
     <b>Timings:</b><br>
-    <ul>
+    <ul class="dayspan">
       <li *ngFor="let timeSpan of timingSpan">
         <span>{{timeSpan.span}}</span>
-        <ul>
+        <ul class="timerange">
           <li *ngFor="let timeRange of timeSpan.timings">{{timeRange}}</li>
         </ul>
       </li>
