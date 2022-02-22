@@ -1,4 +1,4 @@
-<mat-card>
+<mat-card *ngIf="place">
   <mat-card-title>{{place.label}}</mat-card-title>
   <mat-card-subtitle>{{place.address}}</mat-card-subtitle>
   <mat-card-content>
@@ -12,6 +12,12 @@
       </li>
     </ul>
   </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button routerLink="">Back</button>
+  </mat-card-actions>
+</mat-card>
+<mat-card *ngIf="!place">
+  <mat-card-title>Loading...</mat-card-title>
   <mat-card-actions>
     <button mat-raised-button routerLink="">Back</button>
   </mat-card-actions>

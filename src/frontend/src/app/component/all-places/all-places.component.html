@@ -2,7 +2,7 @@
   <mat-card-title>List of Places</mat-card-title>
   <mat-card-content>
     <mat-selection-list [multiple]="false">
-      <mat-list-option *ngFor="let place of places" [value]="place.id" (click)="onItemClicked(place.id)">
+      <mat-list-option *ngFor="let place of places" [value]="place.id" (click)="onItemClicked(place.id)" title="Click to see timings">
         {{place.label}}
       </mat-list-option>
     </mat-selection-list>
